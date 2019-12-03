@@ -1,0 +1,22 @@
+{
+  "name": "gebiuncle-github",
+  "version": "1.0.0",
+  "description": "github 单页",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gebiuncle/Gebiuncle.github.io.git"
+  },
+  "keywords": [],
+  "author": "Gebiuncle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gebiuncle/Gebiuncle.github.io/issues"
+  },
+  "homepage": "https://github.com/Gebiuncle/Gebiuncle.github.io#readme"
+}
