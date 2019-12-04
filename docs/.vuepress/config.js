@@ -22,9 +22,9 @@ module.exports = {
                 text: '分类',  //默认显示        
                 ariaLabel: '分类',   //用于识别的label
                 items: [
-                    { text: '文章', link: '/pages/article/typescript.md' },  
+                    { text: '文章', link: '/pages/article/javascript.md' },  
                     //点击标签会跳转至link的markdown文件生成的页面
-                    { text: '新闻', link: '/pages/news/news.md' },
+                    { text: '学习计划list', link: '/pages/learningList/2019.md' },
                 ]
             },
             
@@ -35,11 +35,13 @@ module.exports = {
         //侧边导航栏：会根据当前的文件路径是否匹配侧边栏数据，自动显示/隐藏
         sidebar: {
             '/pages/article/':[
-                'typescript.md',
-                'koa.md'
+                [ 'javascript.md', 'javascript'],
+                ['typescript.md', 'typescript'],
+                ['node.md', 'node'],
+                ['http.md', 'http']
             ],
-            '/pages/news/':[
-                'news.md'
+            '/pages/learningList/':[
+                ['2019.md', '2019学习计划']
             ]
 
                 // {
