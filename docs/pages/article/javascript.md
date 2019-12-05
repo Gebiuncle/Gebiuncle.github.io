@@ -153,3 +153,12 @@ instanceof检测数据类型不会很准确，也不能检测基本数据类型�
 ![alt 数据类型](/object-type.jpg)
 ## 防抖与节流
 ## call、apply理解
+函数都可以调用 call，说明 call 是函数原型上的方法，所有的实例都可以调用。即: Function.prototype.call。  
+* 在 call 方法中获取调用call()函数
+* 如果第一个参数没有传入，那么默认指向 window / global(非严格模式)
+* 传入 call 的第一个参数是 this 指向的对象，根据隐式绑定的规则，我们知道 obj.foo(), foo() 中的 this 指向 obj;因此我们可以这样调用函数 `thisArgs.func(...args)`
+* 返回执行结果
+![alt call](/call.jpg)
+![alt apply](/apply.jpg)
+## 实现一个Promise 
+## XSS和CSFR
