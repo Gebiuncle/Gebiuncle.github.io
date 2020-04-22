@@ -153,6 +153,8 @@ instanceof检测数据类型不会很准确，也不能检测基本数据类型�
 ![alt 数据类型](/object-type.jpg)
 ## 防抖与节流
 防抖：在规定时间内只触发一次  
+防抖的原理就是：你尽管触发事件，但是我一定在事件触发 n 秒后才执行，如果你在一个事件触发的 n 秒内又触发了这个事件，那我就以新的事件的时间为准，n 秒后才执行，总之，就是要等你触发完事件 n 秒内不再触发事件，我才执行，真是任性呐!  
+github链接 <https://github.com/mqyqingfeng/Blog/issues/22>
 ``` js
 // 思路:在规定时间内未触发第二次，则执行
 function debounce (fn, delay) {
@@ -175,6 +177,7 @@ function fn () {
 addEventListener('scroll', debounce(fn, 1000)) 
 ```
 节流： 在规定时间内未触发第二次，则执行
+节流的原理：如果你持续触发事件，每隔一段时间，执行一次事件。
 ``` js
 // 思路：在规定时间内只触发一次
 function throttle (fn, delay) {
@@ -205,4 +208,4 @@ addEventListener('scroll', throttle(fn, 1000))
 ![alt call](/call.jpg)
 ![alt apply](/apply.jpg)
 ## 实现一个Promise 
-## XSS和CSFR
+## XSS和CSRF
