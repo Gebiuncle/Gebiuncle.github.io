@@ -36,6 +36,7 @@ module.exports = {
         sidebar: {
             '/pages/article/':[
                 [ 'javascript.md', 'javascript'],
+                [ 'javascriptskill.md', 'javascript实用小技巧'],
                 ['typescript.md', 'typescript'],
                 ['node.md', 'node'],
                 ['http.md', 'http']
