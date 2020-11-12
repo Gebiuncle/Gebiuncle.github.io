@@ -260,4 +260,54 @@ addEventListener('scroll', throttle(fn, 1000))
 </srcipt>
 ```
 ## 实现一个Promise 
+## 类和继承
+``` js
+class Person {
+  constructor(name, age) {
+    this.name = name
+    this.age = age
+  }
+  sayHello() {
+    return `Hello My name is ${this.name}, age is ${this.age} `
+  }
+}
+class Man extends Person {
+  constructor(name, age, address) {
+    super(name, age)
+    this.address = address
+  }
+  showAddress() {
+    return `address is ${this.address}`
+  }
+}
+
+Person.prototype.sex = '男'
+// Person.prototype.saySex = function () {
+//   return `sex is ${this.sex} `
+// }
+
+const p = new Person('run', 18)
+// p.__proto__.saySex = function() {
+//   return `sex is ${this.sex} `
+// }
+Object.getPrototypeOf(p).saySex = function () {
+  return `sex is ${this.sex} `
+}
+
+Object.getPrototypeOf(p) === Person.prototype
+p.__proto__ === Person.prototype
+
+const m = new Man('lei', 20, '北京')
+
+document.body.innerHTML = p.sayHello() + p.saySex() + '<br>'
+document.body.innerHTML += m.sayHello() + m.saySex() + m.showAddress() + '<br>'
+
+```
+::: tip __proto__
+__proto__ 并不是语言本身的特性，这是各大厂商具体实现时添加的私有属性，虽然目前很多现代浏览器的 JS 引擎中都提供了这个私有属性，但依旧不建议在生产中使用该属性，避免对环境产生依赖。生产环境中，我们可以使用 Object.getPrototypeOf 方法来获取实例对象的原型，然后再来为原型添加方法/属性。
+:::
+* C.prototype用于建立由 new C() 创建的对象的原型。
+* Object.getPrototype(obj)是ES5中用来获取obj对象的原型对象的标准方法。
+* obj.__proto__是获取obj对象的原型对象的非标准方法。
+
 ## XSS和CSRF

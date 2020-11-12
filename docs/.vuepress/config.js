@@ -44,25 +44,6 @@ module.exports = {
             '/pages/learningList/':[
                 ['2019.md', '2019学习计划']
             ]
-
-                // {
-                //     title: '文章',   // 一级菜单名称
-                //     collapsable: false, // false为默认展开菜单, 默认值true是折叠,
-                //     sidebarDepth: 1,    //  设置侧边导航自动提取markdown文件标题的层级，默认1为h2层级
-                //     children: [
-                //         ['typescript.md', 'typescript'],  
-                //         ['koa.md', 'koa']
-                //     ]
- 
-                // },
-                // {
-                //     title: 'news',
-                //     path: '/pages/news/',
-                //     collapsable: false, 
-                //     children: [
-                //         ['index.md', '新闻页']
-                //     ]
-                // }
         }
     }
 }
