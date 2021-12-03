@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>nodejs学习总结 | 隔壁叔叔个人首页</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/head-sculpture.png">
+    <meta name="description" content="隔壁叔叔的前端记录">
+    
+    <link rel="preload" href="/assets/css/0.styles.1c16823d.css" as="style"><link rel="preload" href="/assets/js/app.4c72a4d3.js" as="script"><link rel="preload" href="/assets/js/2.2e199647.js" as="script"><link rel="preload" href="/assets/js/11.1408f6ba.js" as="script"><link rel="prefetch" href="/assets/js/10.4c08d7f3.js"><link rel="prefetch" href="/assets/js/12.22723b16.js"><link rel="prefetch" href="/assets/js/13.49e9a86a.js"><link rel="prefetch" href="/assets/js/14.49622024.js"><link rel="prefetch" href="/assets/js/3.721a9e70.js"><link rel="prefetch" href="/assets/js/4.b4b57d59.js"><link rel="prefetch" href="/assets/js/5.11025d40.js"><link rel="prefetch" href="/assets/js/6.29f606ae.js"><link rel="prefetch" href="/assets/js/7.c3ba7e78.js"><link rel="prefetch" href="/assets/js/8.dad50da2.js"><link rel="prefetch" href="/assets/js/9.250fc472.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1c16823d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/head-sculpture.png" alt="隔壁叔叔个人首页" class="logo"> <span class="site-name can-hide">隔壁叔叔个人首页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="分类" class="mobile-dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/article/javascript.html" class="nav-link">
+  文章
+</a></li><li class="dropdown-item"><!----> <a href="/pages/learningList/2019.html" class="nav-link">
+  学习计划list
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Gebiuncle" target="_self" class="nav-link external">
+  Github
+  <!----></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="分类" class="mobile-dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/article/javascript.html" class="nav-link">
+  文章
+</a></li><li class="dropdown-item"><!----> <a href="/pages/learningList/2019.html" class="nav-link">
+  学习计划list
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Gebiuncle" target="_self" class="nav-link external">
+  Github
+  <!----></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/pages/article/javascript.html" class="sidebar-link">javascript</a></li><li><a href="/pages/article/javascriptskill.html" class="sidebar-link">javascript实用小技巧</a></li><li><a href="/pages/article/typescript.html" class="sidebar-link">typescript</a></li><li><a href="/pages/article/node.html" aria-current="page" class="active sidebar-link">node</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/article/node.html#nodejs学习总结" class="sidebar-link">nodejs学习总结</a></li><li class="sidebar-sub-header"><a href="/pages/article/node.html#koa知识点" class="sidebar-link">koa知识点</a></li><li class="sidebar-sub-header"><a href="/pages/article/node.html#express" class="sidebar-link">express</a></li></ul></li><li><a href="/pages/article/http.html" class="sidebar-link">http</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="nodejs学习总结"><a href="#nodejs学习总结" class="header-anchor">#</a> nodejs学习总结</h2> <p>node.js官方文档：http://nodejs.cn/learn</p> <h3 id="如何使用-node-js-repl"><a href="#如何使用-node-js-repl" class="header-anchor">#</a> 如何使用 Node.js REPL</h3> <div class="language-js extra-class"><pre class="language-js"><code>node<span class="token operator">+</span>回车
+</code></pre></div><p>.exit 退出</p> <h3 id="从命令行接收参数"><a href="#从命令行接收参数" class="header-anchor">#</a> 从命令行接收参数</h3> <div class="language-js extra-class"><pre class="language-js"><code>node app<span class="token punctuation">.</span>js run
+</code></pre></div><p>获取参数值的方法是使用 Node.js 中内置的 process 对象。</p> <p>它公开了 argv 属性，该属性是一个包含所有命令行调用参数的数组。</p> <p>第一个参数是 node 命令的完整路径。</p> <p>第二个参数是正被执行的文件的完整路径。</p> <p>所有其他的参数从第三个位置开始。
+<img src="/node.jpg" alt="alt 从命令行接收参数"></p> <h3 id="npm包管理工具"><a href="#npm包管理工具" class="header-anchor">#</a> npm包管理工具</h3> <p>安装工具到指定的软件包</p> <div class="language-js extra-class"><pre class="language-js"><code>npm install <span class="token operator">&lt;</span><span class="token keyword">package</span><span class="token operator">-</span>name<span class="token operator">&gt;</span>
+</code></pre></div><p>--save 安装并添加条目到 package.json 文件的 dependencies。
+--save-dev 安装并添加条目到 package.json 文件的 devDependencies。
+区别主要是，devDependencies 通常是开发的工具（例如测试的库），而 dependencies 则是与生产环境中的应用程序相关。</p> <h3 id="node语义版本控制"><a href="#node语义版本控制" class="header-anchor">#</a> node语义版本控制</h3> <p>语义版本控制的概念很简单：所有的版本都有 3 个数字：x.y.z。</p> <ul><li>第一个数字是主版本。</li> <li>第二个数字是次版本。</li> <li>第三个数字是补丁版本。</li></ul> <h2 id="koa知识点"><a href="#koa知识点" class="header-anchor">#</a> koa知识点</h2> <p>koa知识点</p> <h2 id="express"><a href="#express" class="header-anchor">#</a> express</h2> <p>express</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/pages/article/typescript.html" class="prev">
+        typescript
+      </a></span> <span class="next"><a href="/pages/article/http.html">
+        http
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.4c72a4d3.js" defer></script><script src="/assets/js/2.2e199647.js" defer></script><script src="/assets/js/11.1408f6ba.js" defer></script>
+  </body>
+</html>

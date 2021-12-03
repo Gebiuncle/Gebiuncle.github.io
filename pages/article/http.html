@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>http学习总结 | 隔壁叔叔个人首页</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/head-sculpture.png">
+    <meta name="description" content="隔壁叔叔的前端记录">
+    
+    <link rel="preload" href="/assets/css/0.styles.1c16823d.css" as="style"><link rel="preload" href="/assets/js/app.4c72a4d3.js" as="script"><link rel="preload" href="/assets/js/2.2e199647.js" as="script"><link rel="preload" href="/assets/js/8.dad50da2.js" as="script"><link rel="prefetch" href="/assets/js/10.4c08d7f3.js"><link rel="prefetch" href="/assets/js/11.1408f6ba.js"><link rel="prefetch" href="/assets/js/12.22723b16.js"><link rel="prefetch" href="/assets/js/13.49e9a86a.js"><link rel="prefetch" href="/assets/js/14.49622024.js"><link rel="prefetch" href="/assets/js/3.721a9e70.js"><link rel="prefetch" href="/assets/js/4.b4b57d59.js"><link rel="prefetch" href="/assets/js/5.11025d40.js"><link rel="prefetch" href="/assets/js/6.29f606ae.js"><link rel="prefetch" href="/assets/js/7.c3ba7e78.js"><link rel="prefetch" href="/assets/js/9.250fc472.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1c16823d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/head-sculpture.png" alt="隔壁叔叔个人首页" class="logo"> <span class="site-name can-hide">隔壁叔叔个人首页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="分类" class="mobile-dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/article/javascript.html" class="nav-link">
+  文章
+</a></li><li class="dropdown-item"><!----> <a href="/pages/learningList/2019.html" class="nav-link">
+  学习计划list
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Gebiuncle" target="_self" class="nav-link external">
+  Github
+  <!----></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="分类" class="mobile-dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/article/javascript.html" class="nav-link">
+  文章
+</a></li><li class="dropdown-item"><!----> <a href="/pages/learningList/2019.html" class="nav-link">
+  学习计划list
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/Gebiuncle" target="_self" class="nav-link external">
+  Github
+  <!----></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/pages/article/javascript.html" class="sidebar-link">javascript</a></li><li><a href="/pages/article/javascriptskill.html" class="sidebar-link">javascript实用小技巧</a></li><li><a href="/pages/article/typescript.html" class="sidebar-link">typescript</a></li><li><a href="/pages/article/node.html" class="sidebar-link">node</a></li><li><a href="/pages/article/http.html" aria-current="page" class="active sidebar-link">http</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/article/http.html#http学习总结" class="sidebar-link">http学习总结</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="http学习总结"><a href="#http学习总结" class="header-anchor">#</a> http学习总结</h2> <div class="custom-block tip"><p class="custom-block-title">什么是http</p> <p>是个协议（超文本传输协议），规定了浏览器和服务器之间相互通信的规则。
+Http协议最新的版本是1.1，1.0，0.9版本比较老；是基于TCP/IP通信协议来传递数据</p></div> <p>HTTP三个特点：无连接、无状态、独立的</p> <h3 id="http的请求"><a href="#http的请求" class="header-anchor">#</a> http的请求</h3> <p>HTTP请求包括三部分，分别是请求行、请求头和请求正文</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token constant">POST</span> <span class="token operator">/</span>test<span class="token punctuation">.</span>php <span class="token constant">HTTP</span><span class="token operator">/</span><span class="token number">1.1</span>               <span class="token comment">//请求行（请求方法 路径 协议）</span>
+<span class="token constant">HOST</span>：www<span class="token punctuation">.</span>test<span class="token punctuation">.</span>com                    <span class="token comment">//请求头（格式为 key:value）                               </span>
+User<span class="token operator">-</span>Agent：Mozilla<span class="token operator">/</span><span class="token number">5.0</span> （windows <span class="token constant">NT</span> <span class="token number">6.1</span>；rv：<span class="token number">15.0</span>）Gecko<span class="token operator">/</span><span class="token number">20100101</span> Firefox<span class="token operator">/</span><span class="token number">15.0</span> 
+Content<span class="token operator">-</span>type<span class="token operator">:</span> application<span class="token operator">/</span>x<span class="token operator">-</span>www<span class="token operator">-</span>form<span class="token operator">-</span>urlencode
+Content<span class="token operator">-</span>length<span class="token operator">:</span> <span class="token number">5</span> 
+
+Age<span class="token operator">=</span><span class="token number">3</span>       <span class="token comment">//请求正文</span>
+</code></pre></div><h3 id="http的响应"><a href="#http的响应" class="header-anchor">#</a> http的响应</h3> <p>响应行（协议 状态码 状态文字）、响应头信息（格式为 key:value） 空行 主体信息</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token constant">HTTP</span><span class="token operator">/</span><span class="token number">1.1</span> <span class="token number">200</span> <span class="token constant">OK</span> 
+Content<span class="token operator">-</span>type<span class="token operator">:</span> text<span class="token operator">/</span>html
+Content<span class="token operator">-</span>length<span class="token operator">:</span> <span class="token number">5</span> 
+
+hello  
+</code></pre></div><h3 id="请求方法"><a href="#请求方法" class="header-anchor">#</a> 请求方法</h3> <p>GET POST PUT HEAD DELETE OPTIONS TRACE ...    虽然有这么多，但服务器不一定允许支持这些方法
+HEAD: 和GET基本保持一致，只是返回内容<br>
+TRACE: 使用了代理访问了某个网站，你想看看代理有没有修改你的HTTP请去，可以用TRACE来测试一下，服务器会把最后收到的请求返回给你。<br>
+OPTIONS: 返回服务器可用的方法</p> <h3 id="状态码-状态文字"><a href="#状态码-状态文字" class="header-anchor">#</a> 状态码 状态文字</h3> <p>五种状态码：</p> <p>1xx：信息提示，表示请求已被成功接收，继续处理。<br>
+2xx：请求被成功提交。<br>
+3xx：客户端被重定向到其他资源。<br>
+4xx：客户端错误状态码，格式错误或者不存在资源。<br>
+5xx：描述服务器内部错误。</p> <p>常见的状态码描述如下：</p> <p>200：客户端请求成功，是最常见的状态。<br>
+302：重定向。<br>
+304:  未修改  NOT Modified (图片，取缓存)。<br>
+404：请求资源不存在，是最常见的状态。<br>
+400：客户端请求有语法错误，不能被服务器所理解。<br>
+401：请求未经授权。<br>
+403：服务器收到请求，但是拒绝提供服务。<br>
+500：服务器内部错误，是最常见的状态。<br>
+503：服务器当前不能处理客户端的请求。</p> <h3 id="请求头"><a href="#请求头" class="header-anchor">#</a> 请求头</h3> <ul><li>Host 请求报头域主要用于指定被请求资源的Internet主机和端口。</li> <li>User-Agent 请求报头域允许客户端将它的操作系统、浏览器和其他属性告诉服务器。</li> <li>Referer 包含一个URL，代表当前访问URL的上一个URL，也就是说，用户是从什么地* 方来到本页面。当前请求的原始URL地址。</li> <li>Cookie 是非常重要的请求头，常用来表示请求者的身份等。</li> <li>Accept 这个消息头用于告诉服务器客户端愿意接受那些内容，比如图像类，办公文档格式等等。</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/pages/article/node.html" class="prev">
+        node
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.4c72a4d3.js" defer></script><script src="/assets/js/2.2e199647.js" defer></script><script src="/assets/js/8.dad50da2.js" defer></script>
+  </body>
+</html>
