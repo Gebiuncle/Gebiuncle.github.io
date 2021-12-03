@@ -17,14 +17,25 @@ let m = [];
 ```
 3.通过array.indexOf()方法
 ``` js
-   let arr = [1, 1, 2, 2, 7, 5, 6, 6];
-	let m = []
+   let arr = [1, 1, 2, 2, 7, 5, 6, 6]
+   let m = []
    for (let i = 0; i<arr.length; i++) {
-		if(m.indexOf(arr[i])<0){
-			m.push(arr[i])
+		if(m.indexOf(arr[i])<0) {
+         m.push(arr[i])
       }
    }
 ``` 
+4.通过es6的Map对象
+``` js
+   let arr = [1, 1, 2, 2, 7, 5, 6, 6]
+   let map = new Map()
+   let res = arr.filter(item => {
+      if(!map.has(item)) {
+         map.set(item)
+         return map
+      }
+   })
+```
 ## 类数组转数组
 ``` js 
    function arg2arr() {
