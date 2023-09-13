@@ -341,3 +341,54 @@ Set实例的属性和方法
     forEach()：用于对集合成员执行某种操作，没有返回值  
 
 两者都可以用来给数组去重和数据存储
+
+## this指向问题
+::: tip 总结
+实际上关于this指向的原则核心只有一个：谁调用的就指向谁，而关键问题就是找出这个函数或者方法被谁用了。
+:::
+### 1、普通函数式调用
+``` js
+var name = '李'
+var obj = {
+  name: '王',
+  m: {
+    getName: function() {
+      return this.name
+    }
+  }
+}
+console.log(obj.m.getName()) // undefined
+// getName方法是obj.m调用的，所以getName函数的this就指向了obj.m，所以this.m没有定义，因此打印undefined
+var a = obj.m.getName
+console.log(a()) // 李
+// obj.m的getName方法其实是赋值给a,getName的执行环境是在window，所以输出是‘李’
+// 需要注意的是 let、const声明的变量不会挂载到window上
+```
+### 2.箭头函数的this指向
+箭头函数本身是没有 this，箭头函数 this 是定义箭头函数时父级作用域的 this，也就是说使用箭头函数时，箭头函数内部的 this，我们只需要看定义该箭头函数时，该箭头函数父级的 this 即可。（外部作用域的this）
+### 3.普通函数和箭头函数结合使用
+``` js
+var name = 'window'
+let obj = {
+    name: 'obj',
+    sayHi: () => {
+        return function() {
+            console.log(this.name)
+        }
+    },
+    sayFoo: function() {
+        return () => {
+            console.log(this.name)
+        }
+    }
+}
+obj.sayHi()() // window
+// sayHi函数返回一个新的匿名函数，所以主要是看谁调用的这个函数，因为没有具体的调用者，所以this指向全局。
+// 也可以这样理解，sayHi函数定义时候在obj的作用域里边，往上找父级作用域就是window。
+obj.sayFoo()() // obj
+// sayFoo函数返回一个新的匿名箭头函数，所以主要看定义该箭头函数时其父级的this,父级this指向的是该函数的调用者，所以this指向obj。
+// 也可以这样理解，定义箭头函数的时候,它的作用域是在一个sayFoo函数里边，往上找父级作用域，即sayFoo的父级作用域 obj
+// https://blog.csdn.net/qq_45384621/article/details/117384074
+```
+### 4.call、apply、bind
+bind/call/apply三者都是改变函数this指向的，call/apply是改变的同时直接进行函数调用，而bind只是改变this指向，并且返回一个新的函数，不会调用函数。call和apply的区别就是参数格式不同。
